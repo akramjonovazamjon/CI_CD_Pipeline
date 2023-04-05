@@ -12,7 +12,7 @@ public class Test {
 
     @GetMapping("/list")
     public List<String > user(){
-        return List.of("A");
+        return List.of("Azamjon", "Ravshanbek");
     }
 
 }
