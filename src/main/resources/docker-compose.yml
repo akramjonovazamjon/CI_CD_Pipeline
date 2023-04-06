@@ -6,9 +6,9 @@ services:
       - 5432:5432
     restart: always
     environment:
-      POSTGRES_DB: mydatabase
-      POSTGRES_USER: myuser
-      POSTGRES_PASSWORD: mysecretpassword
+      POSTGRES_DB: online_market_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: azamjon1999
   web:
     image: azamjon123/ci-cd
     restart: always
@@ -17,6 +17,6 @@ services:
     depends_on:
       - db
     environment:
-      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/mydatabase
-      SPRING_DATASOURCE_USERNAME: myuser
-      SPRING_DATASOURCE_PASSWORD: mysecretpassword
+      SPRING_DATASOURCE_URL: jdbc:postgresql://localhost:5432/online_market_db
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: azamjon1999
